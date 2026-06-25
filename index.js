@@ -5,7 +5,7 @@ const posts = [
         location: "Zundert, Netherlands",
         avatar: "images/avatar-vangogh.jpg",
         post: "images/post-vangogh.jpg",
-        comment: "just took a few mushrooms lol",
+        description: "just took a few mushrooms lol",
         likes: 21
     },
     {
@@ -14,7 +14,7 @@ const posts = [
         location: "Ornans, France",
         avatar: "images/avatar-courbet.jpg",
         post: "images/post-courbet.jpg",
-        comment: "i'm feelin a bit stressed tbh",
+        description: "i'm feelin a bit stressed tbh",
         likes: 4
     },
     {
@@ -23,19 +23,55 @@ const posts = [
         location: "Paris, France",
         avatar: "images/avatar-ducreux.jpg",
         post: "images/post-ducreux.jpg",
-        comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
+        description: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
         likes: 152
     }
 ]
 
 let identifier = ''
 let i = 0;
-function render() {
-    for (let i = 0; i < posts.length; i++) {
-        document.getElementById(`prof${i}Name`).innerText = posts[i].name
-        document.getElementById(`prof${i}Loc`).innerText = posts[i].location
-        document.getElementById(`post${i}Likes`).innerText = posts[i].likes + " likes"
+
+function renderPage(){
+    for (let i = 0; i < posts.length; i++){
+    document.getElementById('doomScroll').innerHTML += `
+    <section>
+            <div class="posts">
+                <div class="post-profile">
+                    <div>
+                    <img class="user-avatar" src="${posts[i].avatar}" alt=""></img>
+                    </div>
+
+                    <div class="profile-info">
+                        <h2> ${posts[i].name}</h2>
+                        <p> ${posts[i].location}</p>
+                    </div>
+                </div>
+                <div>
+                <img class="post-imgs" src="${posts[i].post}" alt="">
+                </div>
+
+                <div class="interact-section">
+                    <div class="interact-btns">
+                        <img src="images/icon-heart.png" alt="heart button, press to like">
+                        <img src="images/icon-comment.png" alt="comment button">
+                        <img src="images/icon-dm.png" alt="share button">
+                    </div>
+                    <div class="post-bottom">
+                        <h3>${posts[i].likes} likes</h3>
+                        <p>
+                            <span class="bold">
+                            ${posts[i].username}
+                            </span>
+                            <span class="nobold">
+                            ${posts[i].description}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        `
     }
 }
 
-render()
+renderPage()
