@@ -42,26 +42,26 @@ function renderPage(){
                     </div>
 
                     <div class="profile-info">
-                        <h2> ${posts[i].name}</h2>
+                        <a href="#"> ${posts[i].name}</a>
                         <p> ${posts[i].location}</p>
                     </div>
                 </div>
                 <div>
-                <img class="post-imgs" src="${posts[i].post}" alt="">
+                <img id="postImg" class="post-imgs" src="${posts[i].post}" alt="Oldagram post image">
                 </div>
 
                 <div class="interact-section">
                     <div class="interact-btns">
-                        <img src="images/icon-heart.png" alt="heart button, press to like">
+                        <img class="heart" src="images/icon-heart.png" alt="heart button, press to like">
                         <img src="images/icon-comment.png" alt="comment button">
                         <img src="images/icon-dm.png" alt="share button">
                     </div>
                     <div class="post-bottom">
                         <h3>${posts[i].likes} likes</h3>
                         <p>
-                            <span class="bold">
+                            <a href="#" class="bold">
                             ${posts[i].username}
-                            </span>
+                            </a>
                             <span class="nobold">
                             ${posts[i].description}
                             </span>
@@ -75,3 +75,9 @@ function renderPage(){
 }
 
 renderPage()
+
+const pImg = document.getElementById('postImg')
+
+pImg.addEventListener('click', function(){
+    console.log("like!")
+})

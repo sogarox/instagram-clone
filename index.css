@@ -17,7 +17,13 @@ main{
     flex: 1fr 1fr 1fr;
     align-items: center;
 }
-
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    cursor: pointer;
+}
 nav{
     background-color: white;
     display: flex;
@@ -58,6 +64,7 @@ p{
     width: 100%;
     margin: 5px 0px;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .profile-info{
@@ -65,11 +72,13 @@ p{
     
 }
 
-.profile-info h2{
+.profile-info a{
+    font-weight: 800;
     font-size: 13px;
     margin: 0;
-    
 }
+
+
 
 .profile-info p{
     font-size: 12px;
@@ -89,6 +98,19 @@ p{
 }
 .interact-btns img{
     height: 100%;
+}
+
+.heart{
+    transition: ease 0.5s;
+}
+
+.heart:hover{
+    transform: scale(1.2, 1.2);
+}
+
+.heart:active{
+    transition: ease 0.1s;
+    transform: scale(0.6, 0.6);
 }
 
 .post-bottom p{
