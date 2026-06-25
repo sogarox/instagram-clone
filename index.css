@@ -1,5 +1,90 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    background-color: rgb(219, 219, 219);
 }
 
+
+
+main{
+    background-color: rgb(219, 219, 219);
+    margin: auto;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+nav{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
+    height: 70px;
+    margin: 5px 5px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#logo{
+    width: 140px;
+}
+
+.user-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 5px;
+}
+
+.posts{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.post-profile{
+    display: flex;
+    align-items: center;
+}
+
+.post-imgs{
+    width: 100%;
+    margin: 5px 0px;
+    object-fit: contain;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info h2{
+    font-size: 13px;
+    margin: 0;
+}
+
+.profile-info p{
+    font-size: 12px;
+    margin: 0;
+}
+
+.interact-section h3{
+    font-size: 12px;
+    margin: 0px 10px 5px 10px;
+}
+.interact-btns{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    height: 25px;
+}
+.interact-btns img{
+    height: 100%;
+}

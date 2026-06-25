@@ -1,9 +1,44 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <img src="images/logo.png">
-        <script src="index.js"></script>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <nav>
+            <img id="logo" src="images/logo.png">
+            <img class="user-avatar" src="images/user-avatar.png" alt="">
+        </nav>
+        <section>
+            <div class="posts">
+                <div class="post-profile">
+                    <img class="user-avatar" src="images/avatar-vangogh.jpg" alt="">
+                    <div class="profile-info">
+                        <h2 id="prof0Name"></h2>
+                        <p id="prof0Loc"></p>
+                    </div>
+                </div>
+                <img class="post-imgs" src="images/post-vangogh.jpg" alt="">
+                <div class="interact-section">
+                    <div class="interact-btns">
+                        <img src="images/icon-heart.png" alt="heart button, press to like">
+                        <img src="images/icon-comment.png" alt="comment button">
+                        <img src="images/icon-dm.png" alt="share button">
+                    </div>
+                    <h3 id="post0Likes"></h3>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
 </html>

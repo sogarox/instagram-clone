@@ -17,7 +17,7 @@ const posts = [
         comment: "i'm feelin a bit stressed tbh",
         likes: 4
     },
-        {
+    {
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
@@ -28,3 +28,14 @@ const posts = [
     }
 ]
 
+let identifier = ''
+let i = 0;
+function render() {
+    for (let i = 0; i < posts.length; i++) {
+        document.getElementById(`prof${i}Name`).innerText = posts[i].name
+        document.getElementById(`prof${i}Loc`).innerText = posts[i].location
+        document.getElementById(`post${i}Likes`).innerText = posts[i].likes + " likes"
+    }
+}
+
+render()
